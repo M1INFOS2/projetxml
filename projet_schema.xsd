@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="master">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="personnes"/>
+        <xs:element ref="matières"/>
+        <xs:element ref="spécialités"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="personnes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="personne"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="personne">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nom"/>
+        <xs:element ref="établissement"/>
+        <xs:element ref="email"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="établissement" type="xs:string"/>
+  <xs:element name="email" type="xs:string"/>
+  <xs:element name="matières">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="matière"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="matière">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nom"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="ref-intervenant"/>
+        <xs:element ref="résumé"/>
+        <xs:element ref="crédits"/>
+        <xs:element minOccurs="0" ref="horaire_c_td_tp"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:NCName"/>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ref-intervenant">
+    <xs:complexType>
+      <xs:attribute name="ref" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="résumé">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="p"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crédits" type="xs:integer"/>
+  <xs:element name="horaire_c_td_tp" type="xs:string"/>
+  <xs:element name="spécialités">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="spécialité"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="spécialité">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nom"/>
+        <xs:element ref="code"/>
+        <xs:element ref="finalité"/>
+        <xs:element ref="lieu"/>
+        <xs:element maxOccurs="unbounded" ref="ref-responsable"/>
+        <xs:element ref="description"/>
+        <xs:element maxOccurs="unbounded" ref="parcours"/>
+      </xs:sequence>
+      <xs:attribute name="année" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="finalité" type="xs:NCName"/>
+  <xs:element name="description">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="p"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="parcours">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nom"/>
+        <xs:element ref="code"/>
+        <xs:element ref="ref-responsable"/>
+        <xs:element ref="présentation"/>
+        <xs:element ref="lieu"/>
+        <xs:element maxOccurs="unbounded" ref="programme"/>
+        <xs:element minOccurs="0" ref="info"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="présentation" type="xs:string"/>
+  <xs:element name="programme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="ref-matière"/>
+      </xs:sequence>
+      <xs:attribute name="semestre" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ref-matière">
+    <xs:complexType>
+      <xs:attribute name="ref" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="info">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="titre"/>
+        <xs:element ref="p"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="titre" type="xs:string"/>
+  <xs:element name="nom" type="xs:string"/>
+  <xs:element name="p" type="xs:string"/>
+  <xs:element name="code" type="xs:NCName"/>
+  <xs:element name="lieu" type="xs:NCName"/>
+  <xs:element name="ref-responsable">
+    <xs:complexType>
+      <xs:attribute name="ref" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
