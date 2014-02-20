@@ -1,0 +1,70 @@
+<!-- 
+	
+	DTD liée à la représentation des unités d'enseignement du Master,
+	les enseignants, les parcours et les semestres.
+
+	Quentin CHEYNET
+	Sébastien DELECRAZ
+	
+	Dernières modifications : 08/02/2014
+	
+ -->
+
+<!ENTITY luminy  			"Luminy">
+<!ENTITY stjerome			"Saint Jerome">
+<!ENTITY amusciences		"UFR Sciences, Université d'Aix-Marseille">
+
+<!ELEMENT master   			(personnes,matières,spécialités)>
+<!ELEMENT personnes			(personne+)>
+<!ELEMENT matières			(matière+)>
+<!ELEMENT spécialités		(spécialité+)>
+
+<!ELEMENT nom 				(#PCDATA)>
+
+<!ELEMENT spécialité      	(nom,code,finalité?,lieu+,ref-responsable+,description,parcours+)>
+<!ATTLIST spécialité        année  (M1|M2) #REQUIRED>
+<!ELEMENT code      		(#PCDATA)>
+<!ELEMENT finalité      	(#PCDATA)>
+<!ELEMENT lieu      		(#PCDATA)>
+<!ELEMENT description		(p)>
+
+<!ELEMENT ref-responsable 	EMPTY>
+<!ATTLIST ref-responsable  	ref  IDREF  #REQUIRED>
+
+<!ELEMENT ref-intervenant 	EMPTY>
+<!ATTLIST ref-intervenant  	ref  IDREF  #REQUIRED>
+
+<!ELEMENT personne			(nom,établissement,email,site_web?)>
+<!ATTLIST personne 			id ID #REQUIRED>
+<!ELEMENT établissement		(#PCDATA)>
+<!ELEMENT email				(#PCDATA)>
+<!ELEMENT site_web			(#PCDATA)>
+
+<!ELEMENT parcours      	(nom,code,ref-responsable,présentation,lieu+,programme,programme,info*)>
+<!ELEMENT programme      	(ref-matière+)>
+<!ATTLIST programme 		semestre (S1|S2|S3|S4) #REQUIRED>
+<!ELEMENT présentation		     	(#PCDATA)>
+
+<!ELEMENT matière			(nom,ref-intervenant*,résumé,crédits,horaire_c_td_tp?)>
+<!ATTLIST matière			type (optionelle|obligatoire) #REQUIRED
+							id ID #REQUIRED>
+<!ELEMENT ref-matière		EMPTY>
+<!ATTLIST ref-matière	  	ref  IDREF  #REQUIRED>
+<!ELEMENT résumé			(p)>
+<!ELEMENT crédits			(#PCDATA)>
+<!ELEMENT horaire_c_td_tp	(#PCDATA)>
+
+<!ELEMENT p					(#PCDATA|i|g|liste|tab)*>
+<!ELEMENT i					(#PCDATA)>
+<!ELEMENT g					(#PCDATA)>
+<!ELEMENT liste				(p,p+)>
+
+<!ELEMENT tab				(ligne+)>
+<!ELEMENT ligne             (cell+)>
+<!ATTLIST ligne				tete-col (oui|non) 'non'>
+<!ELEMENT cell              (p)>
+<!ATTLIST cell				tete-ligne (oui|non) 'non'>
+
+<!ELEMENT info				(titre,p)>
+<!ELEMENT titre				(#PCDATA)>
+

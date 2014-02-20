@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE master SYSTEM "tp3_dtd.dtd">
+
+<master>
+	<personnes>
+		<personne id="lugiez">
+			<nom>Denis LUGIEZ</nom>
+			<établissement>&amusciences;</établissement>
+			<email>denis.lugiez@univ-amu.fr</email>
+		</personne>
+		<personne id="massat">
+			<nom>Jean-Luc MASSAT</nom>
+			<établissement>&amusciences;</établissement>
+			<email>jean-luc.massat@univ-amu.fr</email>
+		</personne>
+		<personne id="novelli">
+			<nom>Noël Novelli</nom>
+			<établissement>&amusciences;</établissement>
+			<email>noel.novelli@univ-amu.fr</email>
+		</personne>		
+		<personne id="tichit">
+			<nom>Laurent Tichit</nom>
+			<établissement>&amusciences;</établissement>
+			<email>laurent.tichit@univ-amu.fr</email>
+		</personne>	
+		<personne id="creignou">
+			<nom>Nadia Creignou</nom>
+			<établissement>&amusciences;</établissement>
+			<email>nadia.creignou@univ-amu.fr</email>
+		</personne>		
+		<personne id="frederic">
+			<nom>Olive Frederic</nom>
+			<établissement>&amusciences;</établissement>
+			<email>olive.frederic@univ-amu.fr</email>
+		</personne>	
+		<personne id="godard">
+			<nom>Emanuel Godard</nom>
+			<établissement>&amusciences;</établissement>
+			<email>emanuel.godard@univ-amu.fr</email>
+		</personne>		
+		<personne id="santocanale">
+			<nom>Luigi Santocanale</nom>
+			<établissement>&amusciences;</établissement>
+			<email>luigi.santocanale@univ-amu.fr</email>
+		</personne>	
+		<personne id="couetoux">
+			<nom>Basil Couetoux</nom>
+			<établissement>&amusciences;</établissement>
+			<email>basil.couetoux@univ-amu.fr</email>
+		</personne>	
+		<personne id="morin">
+			<nom>Rémi Morin</nom>
+			<établissement>&amusciences;</établissement>
+			<email>remi.morin@univ-amu.fr</email>
+		</personne>	
+	</personnes>
+	
+	<matières>
+		<matière id="anglais2" type="obligatoire">
+			<nom>Anglais 2</nom>
+			<résumé>
+				<p>
+					Expression orale et écrite : exposés sur des sujets scientifiques
+					et / ou professionnels, travaux écrits. Préparation et passage du
+					TOEIC.
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+		</matière>
+		<matière id="communication2" type="obligatoire">
+			<nom>Communication 2</nom>
+			<résumé>
+				<p>
+					Connaître le monde de l'entreprise. Positionner son projet
+					professionnel. Réussir un recrutement, un stage professionnel ou un
+					emploi. Identifier et situer ses aptitudes et ses compétences.
+					Clarifier ses motivations et leurs incidences sur un parcours ou
+					des choix professionnels.
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+		</matière>
+		
+		<matière id="GL" type="obligatoire">
+			<nom>Géniel Logiciel</nom>
+			<ref-intervenant ref="novelli" />
+			<ref-intervenant ref="tichit" />
+			<résumé>
+				<p>
+					Processus logiciel - Gestion de projet - Spécification et conception (artefact : notation UML) - Design patterns
+				</p>
+			</résumé>
+			<crédits>6</crédits>
+			<horaire_c_td_tp>20h/20h/20h</horaire_c_td_tp>
+		</matière>
+		<matière id="Complexité" type="obligatoire">
+			<nom>Complexité</nom>
+			<ref-intervenant ref="creignou" />
+			<ref-intervenant ref="frederic" />
+			<résumé>
+				<p>
+					Rappels sur les notions d'analyse de la complexité des algorithmes et des problèmes. - Notion de problèmes (décision, recherche, dénombrement, énumération, optimisation). Bornes inférieures de complexité. - Classes P et NP. Problèmes NP-complets. - Méthodes de résolution des problèmes NP-Complets.
+				</p>
+			</résumé>
+			<crédits>6</crédits>
+			<horaire_c_td_tp>20h/20h/20h</horaire_c_td_tp>
+		</matière>
+		<matière id="Réseaux" type="obligatoire">
+			<nom>Réseaux</nom>
+			<ref-intervenant ref="godard" />
+			<résumé>
+				<p>
+					Architecture en couches, standard OSI - Couche physique - Couche liaison de Données - Réseau IP - Algorithmes de routage, routage IP - Protocole TCP/IP - Couche Application : HTTP, SMTP, FTP, ... - Bases des protocoles cryptographiques (terminologie, architecture à clef publique). - Introduction à la Sécurité des réseaux.
+				</p>
+			</résumé>
+			<crédits>6</crédits>
+			<horaire_c_td_tp>20h/20h/20h</horaire_c_td_tp>
+		</matière>
+		<matière id="progfonct" type="obligatoire">
+			<nom>Programmation fonctionnelle</nom>
+			<ref-intervenant ref="santocanale" />
+			<ref-intervenant ref="couetoux" />
+			<résumé>
+				<p>
+					Introduction à la programmation fonctionnelle, sur l'exemple du langage OCaml Expressions, évaluation, types de base. Polymorphisme, ordre supérieur. Fonctions récursives, filtrage. Les diverses stratégies d'évaluation, application à la programmation d'un opérateur de point fixe. 2- Les types Sommes, types récursifs, polymorphes. Arbres. Filtrage. 3- Sémantique opérationnelle Liaisons, environnements, clôtures. Évaluation des fonctions récursives . 4- Aspects impératifs Exceptions, entrées-sorties, séquencement, fichiers, références, tableaux, enregistrements. 5- Implantation du filtrage en OCaml Termes formels, substitutions, filtrage.
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>
+		<matière id="progpara" type="obligatoire">
+			<nom>Programmation fonctionnelle</nom>
+			<ref-intervenant ref="morin" />
+			<résumé>
+				<p>
+					Ma position est que dans programmation parallèle, on fait de la programmation multithread en JAVA, en tâchant d'être rigoureux : présentation des problèmes et des solutions algorithmiques ; classes utiles ; construction de classe threadsafe ; détail de modèle mémoire Java et garantie DRF. Cette année j'ai ajouté vérification formelle d'algorithmes parallèles (ou distribués).
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>			
+		<matière id="proglog" type="optionelle">
+			<nom>Programmation logique</nom>
+			<résumé>
+				<p>
+					Introduction. Forme générale des règles. Effacement, unification, backtracking. Contrôle de l'exécution. - Listes, arbres et n-uplets. Liste représentée par différence de listes. Ajout en tête et en queue, concaténation. - Analyseurs syntaxiques. Construction d'un arbre syntaxique. Liste des feuilles d'un arbre. Freeze et analyse par feuille. - Règles prédéfinies.
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>			
+		<matière id="outils_internet" type="optionelle">
+			<nom>Outils de l'internet</nom>
+			<résumé>
+				<p>
+					Présentation d'Internet. - Les langages et les normes sur Internet. - Les protocoles : HTTP, HTTP, SMTP, IMAP, POP3 - Les applications web. - Sécurité. - Les nouvelles et futures technologies.
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>			
+
+		<matière id="sys_embarque" type="optionelle">
+			<nom>Système embarqué</nom>
+			<résumé>
+				<p>
+					nous sommes désolé, mais nous n'avons pas encore de résumé.	
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>
+		<matière id="FIL" type="optionelle">
+			<nom>Fondamentaux pour l'ingénierie des langues</nom>
+			<résumé>
+				<p>
+					Rappel de théorie des langages - Algorithmes d'analyse syntaxique pour grammaires ambiguës - Transducteurs finis et leur application en TAL	
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>
+		<matière id="MED" type="optionelle">
+			<nom>Modèles à évènements discrets</nom>
+			<résumé>
+				<p>
+					Posséder les notions de base en modélisation et analyse de systèmes dynamiques à événements discrets et particulièrement appréhender le formalisme réseau de Pétri. Étudier la conception et la spécification des systèmes réactifs à travers l'analyse du modèle à évènements discrets (concurrence, parallélisme, synchronisation).
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>C/TD 20h/10h</horaire_c_td_tp>
+		</matière>
+		<matière id="IAA" type="optionelle">
+			<nom>Introduction à l'apprentissage automatique</nom>
+			<résumé>
+				<p>
+					Introduction aux concepts de bases : formalisme statistique, erreur de généralisation - Arbres de décision : algorithme ID3, élagage, programmation - Algorithme du perceptron : algorithme, temps de convergence, propriétés de généralisation, application à la classification de textes - Régression logistique : cadre probabiliste, maximisation de la vraisemblance, optimisation par gradient conjugué et méthode de Newton, application à la classification de textes - Quelques éléments théoriques : notion de capacité de classes de fonctions, complexité de Rademacher, borne dépendante des données.
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>
+
+		<matière id="anglais1" type="obligatoire">
+			<nom>Anglais</nom>
+			<résumé>
+				<p>
+					Un enseignement destiné à confirmer l'utilisation de l'anglais dans le contexte de l'informatique ainsi que dans la pratique professionnelle.
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>		
+			<matière id="communication1" type="obligatoire">
+			<nom>Communication</nom>
+			<résumé>
+				<p>
+					chapitre 1  : Théories de la communication : 1.1 La théorie mathématique de l’information (Shannon, Weaver), la cybernétique (Wiener) 1.2 La théorie de Palo Alto ( Bateson, Watzlawick) et la théorie de la communication par les processus (Mucchielli) chapitre 2 : Rôle de l’interculturalité dans le travail en équipe : 2.1 L’enquête interculturelle de Hofstede pour IBM 2.2 La gestuelle et le paralangage et la proxémie dans le monde (Hall) chapitre 3 : Notions de management et de travail collaboratif 3.1 Le travail collaboratif vs le travail coopératif 3.2 La notion de groupes 3.3 Les compétences managériales
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>Cours/TD 15h/8h</horaire_c_td_tp>
+		</matière>			
+			<matière id="bda" type="obligatoire">
+			<nom>Bases de données avancées</nom>
+			<résumé>
+				<p>
+					Transactions, concurrence - Déclencheurs et exceptions - Conception, Entités/Associations
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>		
+		<matière id="xml" type="obligatoire">
+			<nom>XML</nom>
+			<ref-intervenant ref="massat" />
+			<résumé>
+				<p>
+					XML, DTD, XSD - XPath, XSLT, XQuery
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>		
+		<matière id="aro" type="obligatoire">
+			<nom>Algorithmique et recherche opérationnelle</nom>
+			<résumé>
+				<p>
+					Programmation linéaire. - Notions et algorithmes de flots. - Applications (couplage, affectation, transport, ...) - Programmation dynamique (sac à dos, ordonnancement, ...) - Algorithmes à performance garantie
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>		
+		
+			<matière id="ter" type="optionelle">
+			<nom>Projet</nom>
+			<résumé>
+				<p>
+					Le but du projet est de mettre en oeuvre, de l'analyse à la programmation, les notions présentées en cours. C'est l'occasion, pour les étudiants, d'utiliser sur un cas pratique, les éléments exposées dans les UE. Travail effectué sous la direction pédagogique d'un enseignant, et donnant lieu à la rédaction d'un mémoire et d'une soutenance orale.
+				</p>
+			</résumé>
+			<crédits>6</crédits>
+		</matière>	
+		<matière id="stageM1" type="optionelle">
+			<nom>Stage</nom>
+			<résumé>
+				<p>
+					Le but du projet est de mettre en oeuvre, de l'analyse à la programmation, les notions présentées en cours. C'est l'occasion, pour les étudiants, d'utiliser sur un cas pratique, les éléments exposées dans les UE. Travail effectué sous la direction pédagogique d'un enseignant, et donnant lieu à la rédaction d'un mémoire et d'une soutenance orale.
+				</p>
+			</résumé>
+			<crédits>6</crédits>
+		</matière>	
+		<matière id="sémantique" type="optionelle">
+			<nom>Sémantique</nom>
+			<résumé>
+				<p>
+					1-Le lambda-calcul simplement typé Syntaxe, typage, beta et eta-conversions, équations. Modèles : interprétation des jugements de typage. 2-Extension à PCF. La règle \mu. 3-Points fixes dans les ordres partiels complets. Le théorème de Tarski. 4-Sémantique par point fixe de PCF. 5-Cours de clôture : survol des différentes approches sémantiques. Sémantiques opérationnelles : par transitions, naturelles, machine abstraite de Landin. Sémantique dénotationnelles : cas fonctionnel(cf.chapitre 4) et cas d'un petit langage impératif.rammation linéaire. - Notions et algorithmes de flots. - Applications (couplage, affectation, transport, ...) - Programmation dynamique (sac à dos, ordonnancement, ...) - Algorithmes à performance garantie
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>	
+		<matière id="AD" type="optionelle">
+			<nom>Algorithmique distribuée</nom>
+			<résumé>
+				<p>
+					Un système distribué est un ensemble d’entités autonomes de calcul (ordinateurs, PDA, processeurs, processus, processus léger, ...) interconnectées et qui peuvent communiquer entre eux. Ce cours est une introduction aux méthodes pour la conception d'algorithmes dans de tels systèmes. Il donne une présentation des différents types de systèmes distribués et des différents problèmes que l'on doit résoudre. Les problèmes abordés sont : l'élection, le consensus, la diffusion, l'exploration, la réplication, l'exploration et le rendez-vous avec des agent mobiles.
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>	
+		<matière id="ISI" type="optionelle">
+			<nom>Intégration des systèmes d'information</nom>
+			<résumé>
+				<p>
+					Problématique d'intégration des SI - Architectures et patrons d'intégration - Systèmes d'Information d'entreprises - Systèmes d'Information sur Internet
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>		
+		<matière id="fouilleSGBD" type="optionelle">
+			<nom>Initiation à la fouille de données et à l’optimisation des SGBD</nom>
+			<ref-intervenant ref="novelli" />
+			<résumé>
+				<p>
+					Actuellement, de plus en plus de données sont conservées sans être réellement exploitées. Elles représentent pourtant une source importante d’information. La fouille de données peut-être définie comme le processus permettant d’extraire de l’information non triviale et non préalablement connue à partir des données. Dans cet enseignement, nous nous focaliserons sur l’extraction de corrélations entre les données (règle d’association, Dépendances Fonctionnelles...) et nous verrons des techniques de mesure de la qualité des données (détection et correction d’erreur). Par ailleurs, nous passerons du côté obscur des SGBD en mettant évidence le lien existant entre les performances d'un SGBD et les choix d'implémentation des différents algorithmes utilisés (gestion de la concurrence, reprise sur panne, transaction...) ainsi que les différentes implémentations existantes des opérations de base des SGBD comme les jointures ou les tris accompagnés de leurs conditions d'utilisation.
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>		
+		<matière id="IA" type="optionelle">
+			<nom>Intelligence artificielle</nom>
+			<résumé>
+				<p>
+					Introduction à l'IA - Problèmes d'espace d'états et d'exploration - Logiques pour l'IA et démonstration automatique - Représentation de connaissances - Actions, temps et planification - Programmation par contraintes et réseaux de contraintes
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>
+		<matière id="APG" type="optionelle">
+			<nom>Algorithme à performance garantie</nom>
+			<ref-intervenant ref="couetoux" />
+			<résumé>
+				<p>
+					Algorithmes d'approximation de nature combinatoire pour les problèmes NP-complets suivants : Voyageur de Commerce, arbre de Steiner, ordonnancement de taches, clustering, p-centres, sac à dos, bin packing, couverture d'ensemble, la plus courte sur-séquence commune ; - FPTAS et PTAS (ordonnancement de taches et sac à dos) ; - Algorithmes d'approximation par programmation linéaire : l'arrondi et la méthode primale-duale (MAXSAT, couverture d'ensemble, multicoupes et multiflots dans les arbres) ; - Algorithmes en ligne et compétitivité : la pagination et les k-serveurs.
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>
+		<matière id="crypto" type="optionelle">
+			<nom>Pratique de la cryptographiee</nom>
+			<ref-intervenant ref="morin" />
+			<résumé>
+				<p>
+					Cette UE propose un tour d'horizon de la cryptographie moderne avec une attention particulière pour le codage de primitives cryptographiques. Il s'agit tout d'abord de comprendre les problèmes centraux de confidentialité, d’authentification et d’intégrité. Les notions de signature et de certificats électroniques seront aussi étudiées. Les différents types de solutions seront présentées : cryptographie symétrique, asymétrique, par flot, par blocs, les fonctions de hâchage, les architectures PKI, etc. Le détail des techniques éprouvées telles que RC4, AES, RSA, DSA feront l'objet d'un codage en C ou en Java. Enfin les Travaux Pratiques permettront de s'initier à des librairies standards pour le calcul sur de grands entiers, à savoir GMP en C ou BigInteger en Java, ainsi qu'au fonctionnement de l’extension JCE (Java Cryptography Extension).
+				</p>
+			</résumé>
+			<crédits>3</crédits>
+			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
+		</matière>
+
+		<!-- <matière id="Fiabilité logicielle" /> -->
+		<!-- <matière id="Plateforme JEE" /> -->
+		<!-- <matière id="Systèmes hétérogènes" /> -->
+		<!-- <matière id="Projet d'entreprise" /> -->
+		<!-- <matière id="Sécurité internet et réseau" /> -->
+		<!-- <matière id="Fiabilité logicielle" /> -->
+		<!-- <matière id="Qualité" /> -->
+		<!-- <matière id="Sécurité des systèmes embarqués" /> -->
+		<!-- <matière id="Projet industriel de mise en application" /> -->
+		<!-- <matière id="Stage en entreprise" /> -->
+	</matières>
+	<spécialités>
+		<spécialité année="M2">
+			<nom>Fiabilité, sécurité et intégration logicielle
+			</nom>
+			<code>FSIL</code>
+			<finalité>Pro</finalité>
+			<lieu>&luminy;</lieu>
+			<ref-responsable ref="lugiez" />
+			<ref-responsable ref="massat" />
+			<description>
+				<p>
+					Description : Cette spécialité à finalité professionnelle est une
+					composante du Master Informatique. Elle est déclinée en deux
+					parcours qui partagent un tronc-commun au début de la deuxième
+					année (semestre 3).
+				</p>
+			</description>
+			<parcours>
+				<nom>Fiabilité et sécurité informatique</nom>
+				<code>FSI</code>
+				<ref-responsable ref="lugiez" />
+				<présentation>
+					La formation donne les principes et techniques liés à
+					la conception de systèmes informatiques surs dans un environnement
+					ouvert et hétérogène. Elle forme les étudiants aux principes et
+					méthodes de développement modernes qui reposent sur des outils de
+					prototypage, de test et de suivi de logiciels, avec des
+					méthodologies normalisées. Elle apporte des compétences fortes en
+					sécurité informatique dans les domaines liés à l'échange
+					d'information (Web-services, protocoles de communication et
+					cryptographiques,..) et à la communication entre systèmes (réseaux
+					hétérogènes et applications embarquées ou distribuées).
+				</présentation>
+				<lieu>&luminy;</lieu>
+				<programme semestre="S3">
+					<ref-matière ref="anglais2" />
+					<!-- <ref-matière ref="communication2" /> -->
+					<!-- <ref-matière ref="Fiabilité logicielle" /> -->
+					<!-- <ref-matière ref="Plateforme JEE" /> -->
+					<!-- <ref-matière ref="Systèmes hétérogènes" /> -->
+					<!-- <ref-matière ref="Projet d'entreprise" /> -->
+					<!-- <ref-matière ref="Sécurité internet et réseau" /> -->
+					<!-- <ref-matière ref="Fiabilité logicielle" /> -->
+					<!-- <ref-matière ref="Qualité" /> -->
+					<!-- <ref-matière ref="Sécurité des systèmes embarqués" /> -->
+				</programme>
+				<programme semestre="S4">
+					<ref-matière ref="anglais2" />
+					<!-- <ref-matière ref="Projet industriel de mise en application" /> -->
+					<!-- <ref-matière ref="Stage en entreprise" /> -->
+				</programme>
+			</parcours>
+			<parcours>
+				<nom>Intégration de Systèmes Logiciels</nom>
+				<code>ISL</code>
+				<ref-responsable ref="massat" />
+				<présentation>
+					Le développement de l'Internet/Intranet et des
+					applications associées
+					a fait émerger de nouvelles normes pour la
+					structuration des
+					applications informatiques réparties. L'enjeu est
+					de présenter des
+					modèles (programmation par composants, par aspects,
+					design
+					pattern), des plateformes (JEE, .NET, Corba, etc.) et des
+					outils
+					(JAVA, SGBDOO, XML) qui offrent un cadre dans lequel les
+					applications sont développées, validées et intégrées plus
+					facilement. L'objectif de ce parcours est d'initier les étudiants à
+					la conception et à la réalisation d'applications dans de tels
+					cadres. La formation mettra plus particulièrement l'accent sur les
+					notions d'architecture logicielle, de programmation par composants,
+					de qualité et de fiabilité. Elle utilisera la plateforme Java
+					Enterprise Edition pour concrétiser les concepts présentés.
+				</présentation>
+				<lieu>&luminy;</lieu>
+				<programme semestre="S3">
+					<ref-matière ref="anglais2" />
+				</programme>
+				<programme semestre="S4">
+					<ref-matière ref="anglais2" />
+				</programme>
+				<info>
+					<titre>Connaissance à acquérir</titre>
+					<p>
+						L'objectif de la spécialité FSIL est de former des étudiants
+						afin qu'ils
+						puissent concevoir, réaliser, valider et mettre en
+						exploitation
+						des logiciels. Pour ce faire, ils devront connaître
+						les concepts,
+						les outils et les méthodes liés au développement de
+						logiciels. Les
+						aspects de qualité, de sécurité et de bonne
+						intégration dans des
+						environnements informatiques complexes seront
+						les points forts de
+						la formation.
+					</p>
+				</info>
+			</parcours>
+		</spécialité>
+	</spécialités>
+</master>
+
