@@ -11,6 +11,8 @@ xsd : temp
 temp :
 	xmllint --valid --noent projet.xml > temp.xml 
 
+web :
+	xsltproc projet_xsl.xsl projet.xml > www/index.html
 
 clean:
-	rm *.html temp.xml
+	rm www/*.html temp.xml
