@@ -1,0 +1,17 @@
+<ul>{
+	for $x in doc("projet.xml")/master/personnes/personne
+	order by $x
+	return <li>
+			<b>{data($x/nom)}</b>
+			<ul>{
+				for $y in doc("projet.xml")/master/matières/matière
+				where $x/@id=$y/ref-intervenant/@ref
+				return <li>{data($y/nom)} : 
+					{for $z in doc("projet.xml")/master/spécialités/spécialité/parcours
+					where $y/@id=$z/programme/ref-matière/@ref 
+					return $z/nom	
+				}</li>
+			}</ul>
+		</li>
+}</ul>
+
