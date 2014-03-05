@@ -143,8 +143,9 @@
 						</ul>
 
 						<h2>Parcours</h2>
-						<xsl:if test="not(../../spécialités/spécialité/parcours[ref-responsable/@ref = $nom_p])">
-							Aucun parcours.							
+						<xsl:if
+							test="not(../../spécialités/spécialité/parcours[ref-responsable/@ref = $nom_p])">
+							Aucun parcours.
 						</xsl:if>
 						<ul>
 							<xsl:for-each
@@ -171,6 +172,9 @@
 						<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 					</head>
 					<body>
+						<xsl:variable name="nom_m">
+							<xsl:value-of select="@id" />
+						</xsl:variable>
 						<table border="1" bgcolor="#CCC" cellspacing="3px">
 							<tr>
 								<th>Nom</th>
@@ -207,6 +211,31 @@
 								</td>
 							</tr>
 						</table>
+
+
+
+
+
+						<h3> Cette matière apparaît dans les parcours :</h3>
+						<ul>
+							<xsl:for-each select="../../spécialités/spécialité/parcours">
+								<xsl:variable name="code_p">
+									<xsl:value-of select="code" />
+								</xsl:variable>
+								<xsl:for-each select="programme/ref-matière[@ref=$nom_m]">
+									<li>
+										<a href="parcours-{$code_p}.html#{$code_p}">
+											<xsl:value-of select="../../nom" />
+										</a>
+									</li>
+								</xsl:for-each>
+							</xsl:for-each>
+
+						</ul>
+
+
+
+
 					</body>
 				</html>
 			</xsl:document>
