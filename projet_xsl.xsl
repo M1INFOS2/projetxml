@@ -293,6 +293,9 @@
 								</td>
 							</tr>
 						</table>
+						
+						<xsl:value-of select="présentation" />
+						
 					</body>
 				</html>
 			</xsl:document>
