@@ -496,7 +496,8 @@
 		<spécialité année="M1">
 			<nom>Tronc commun</nom>
 			<code>M1</code>
-			<lieu>Luminy et l'Étoile</lieu> <!-- arranger -->
+			<finalité>Tout</finalité>
+			<lieu>&luminy;</lieu> <!-- arranger -->
 			<ref-responsable ref="morin" />
 			<description>
 				<p>
@@ -533,35 +534,35 @@
 					semestre de printemps.
 
 				</présentation>
-				<lieu>Luminy et l'Étoile</lieu> <!-- arranger -->
+				<lieu>&luminy;</lieu> <!-- arranger -->
 				<programme semestre="S1">
-					<ref-matière ref="GL" />
-					<ref-matière ref="Complexité" />
-					<ref-matière ref="Réseaux" />
-					<ref-matière ref="progfonct" />
-					<ref-matière ref="progpara" />
-					<ref-matière ref="proglog" />
-					<ref-matière ref="outils_internet" />
-					<ref-matière ref="sys_embarque" />
-					<ref-matière ref="FIL" />
-					<ref-matière ref="MED" />
-					<ref-matière ref="IAA" />
-					<ref-matière ref="crypto" />
+					<ref-matière ref="GL"/>
+					<ref-matière ref="Complexité"/>
+					<ref-matière ref="Réseaux"/>
+					<ref-matière ref="progfonct"/>
+					<ref-matière ref="progpara"/>
+					<ref-matière ref="proglog"/>
+					<ref-matière ref="outils_internet"/>
+					<ref-matière ref="sys_embarque"/>
+					<ref-matière ref="FIL"/>
+					<ref-matière ref="MED"/>
+					<ref-matière ref="IAA"/>
+					<ref-matière ref="crypto"/>
 				</programme>
 				<programme semestre="S2">		
-					<ref-matière ref="anglais1" type="obligatoire"/>
-					<ref-matière ref="communication1" type="obligatoire"/>
-					<ref-matière ref="bda" type="obligatoire"/>
-					<ref-matière ref="xml" type="obligatoire"/>
-					<ref-matière ref="aro" type="obligatoire"/>
-					<ref-matière ref="ter" type="optionelle"/>
-					<ref-matière ref="stageM1" type="optionelle"/>
-					<ref-matière ref="sémantique" type="optionelle"/>
-					<ref-matière ref="AD" type="optionelle"/>
-					<ref-matière ref="ISI" type="optionelle"/>
-					<ref-matière ref="fouilleSGBD" type="optionelle"/>
-					<ref-matière ref="IA" type="optionelle"/>
-					<ref-matière ref="APG" type="optionelle"/>
+					<ref-matière ref="anglais1" />
+					<ref-matière ref="communication1" />
+					<ref-matière ref="bda" />
+					<ref-matière ref="xml" />
+					<ref-matière ref="aro" />
+					<ref-matière ref="ter" />
+					<ref-matière ref="stageM1" />
+					<ref-matière ref="sémantique" />
+					<ref-matière ref="AD" />
+					<ref-matière ref="ISI" />
+					<ref-matière ref="fouilleSGBD" />
+					<ref-matière ref="IA" />
+					<ref-matière ref="APG" />
 				</programme>
 			</parcours>
 		</spécialité>

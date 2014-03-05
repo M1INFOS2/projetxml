@@ -211,11 +211,6 @@
 								</td>
 							</tr>
 						</table>
-
-
-
-
-
 						<h3> Cette matière apparaît dans les parcours :</h3>
 						<ul>
 							<xsl:for-each select="../../spécialités/spécialité/parcours">
@@ -230,12 +225,7 @@
 									</li>
 								</xsl:for-each>
 							</xsl:for-each>
-
 						</ul>
-
-
-
-
 					</body>
 				</html>
 			</xsl:document>
