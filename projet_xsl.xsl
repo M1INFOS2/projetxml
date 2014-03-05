@@ -130,7 +130,7 @@
 						<xsl:variable name="nom_p">
 							<xsl:value-of select="@id" />
 						</xsl:variable>
-						<h2 align="center">Matières enseignées</h2>
+						<h2>Matières enseignées</h2>
 						<ul>
 							<xsl:for-each
 								select="../../matières/matière[ref-intervenant/@ref = $nom_p]">
@@ -141,6 +141,22 @@
 								</li>
 							</xsl:for-each>
 						</ul>
+
+						<h2>Parcours</h2>
+						<xsl:if test="not(../../spécialités/spécialité/parcours[ref-responsable/@ref = $nom_p])">
+							Aucun parcours.							
+						</xsl:if>
+						<ul>
+							<xsl:for-each
+								select="../../spécialités/spécialité/parcours[ref-responsable/@ref = $nom_p]">
+								<li>
+									<a href="parcours-{code}.html#{code}">
+										<xsl:value-of select="nom" />
+									</a>
+								</li>
+							</xsl:for-each>
+						</ul>
+
 					</body>
 				</html>
 			</xsl:document>
