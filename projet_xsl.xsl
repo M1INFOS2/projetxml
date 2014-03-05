@@ -12,6 +12,7 @@
 			<html>
 				<head>
 					<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+				  	<link rel="stylesheet" type="text/css" href="mon_style.css" />
 				</head>
 				<body>
 					<xsl:call-template name="liste-personnes-nom" />
@@ -57,7 +58,7 @@
 
 	<xsl:template name="liste-spécialités-nom">
 		<h2>Spécialités et parcours</h2>
-		<table border="1" bgcolor="#CCC" cellspacing="3px">
+<table>
 			<tr>
 				<th>Années</th>
 				<th>Spécialité</th>
@@ -103,6 +104,7 @@
 				<html>
 					<head>
 						<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+					  <link rel="stylesheet" type="text/css" href="mon_style.css" />
 					</head>
 					<body>
 						<h2 align="center">
@@ -170,6 +172,7 @@
 				<html>
 					<head>
 						<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+					  <link rel="stylesheet" type="text/css" href="mon_style.css" />
 					</head>
 					<body>
 						<xsl:variable name="nom_m">
@@ -238,6 +241,7 @@
 				<html>
 					<head>
 						<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+					  <link rel="stylesheet" type="text/css" href="mon_style.css" />
 					</head>
 					<body>
 						<table border="1" bgcolor="#CCC" cellspacing="3px">
@@ -298,6 +302,7 @@
 				<html>
 					<head>
 						<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+					  <link rel="stylesheet" type="text/css" href="mon_style.css" />
 					</head>
 					<body>
 						<table border="1" bgcolor="#CCC" cellspacing="3px">

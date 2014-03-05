@@ -1,0 +1,28 @@
+table, td, th,tr
+{
+	border : solid 1px black;
+	background-color : #222;
+}
+
+body { 
+     Background:#444; 
+     color : #EEE;
+ } 
+
+
+h1{
+	color : #CC6D00;
+}
+
+h2{
+	color : #CC6D00;
+}
+
+a:link{
+color : #EEE;
+}
+
+a:visited {color:#CCC;}
+a:hover {color:#FFF;}
+}
+
