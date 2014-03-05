@@ -534,7 +534,12 @@
 				</présentation>
 				<lieu>Luminy et l'Étoile</lieu> <!-- arranger -->
 				<programme semestre="S1">
-					<ref-matière ref="anglais2" />
+					<ref-matière ref="GL" />
+					<ref-matière ref="Complexité" />
+					<ref-matière ref="Réseaux" />
+					<ref-matière ref="progfonct" />
+					<ref-matière ref="progpara" />
+					<ref-matière ref="proglog" />
 				</programme>
 				<programme semestre="S2">
 					<ref-matière ref="anglais2" />
