@@ -9,6 +9,9 @@ body {
      color : #EEE;
  } 
 
+ul,ol,li {
+   color : #F2C12C;
+}
 
 h1{
 	color : #CC6D00;
@@ -18,8 +21,12 @@ h2{
 	color : #CC6D00;
 }
 
+h3{
+	color : #C47D0A;
+}
+
 a:link{
-color : #EEE;
+color : #FFF;
 }
 
 a:visited {color:#CCC;}
