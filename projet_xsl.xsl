@@ -299,10 +299,7 @@
 							<xsl:value-of select="présentation" />
 						</p>
 						<br />
-
-
 						<h2>Programme des enseignements</h2>
-
 						<xsl:for-each select="programme">
 							<h3>
 								Programme du semestre
@@ -318,14 +315,15 @@
 											<xsl:variable name="nom_m">
 												<xsl:value-of select="@ref" />
 											</xsl:variable>
-											<xsl:value-of
-												select="../../../../../matières/matière[@id = $nom_m]/nom" />
+											<a href="matiere-{$nom_m}.html#{$nom_m}">
+												<xsl:value-of
+													select="../../../../../matières/matière[@id = $nom_m]/nom" />
+											</a>
 										</td>
 									</tr>
 								</xsl:for-each>
 							</table>
 						</xsl:for-each>
-
 					</body>
 				</html>
 			</xsl:document>
