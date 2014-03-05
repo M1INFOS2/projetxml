@@ -59,24 +59,37 @@
 		<h2>Spécialités et parcours</h2>
 		<table border="1" bgcolor="#CCC" cellspacing="3px">
 			<tr>
+				<th>Années</th>
 				<th>Spécialité</th>
 				<th>Parcours</th>
 			</tr>
 			<xsl:for-each select="spécialités/spécialité">
 				<tr>
 					<td>
-						<a href="specialite-{code}.html#{code}">
-							<xsl:value-of select="nom" />
-						</a>
+						<xsl:value-of select="@année" />
 					</td>
 					<td>
-						<xsl:for-each select="parcours">
-							<table border="3" bgcolor="#CCC" cellspacing="3px">					<!-- à revoir... -->
-								<a href="parcours-{code}.html#{code}">
-									<xsl:value-of select="nom" />
-								</a>
-							</table>
-						</xsl:for-each>
+						<xsl:if test="not(nom = ./parcours/nom)">
+							<a href="specialite-{code}.html#{code}">
+								<xsl:value-of select="nom" />
+							</a>
+						</xsl:if>
+						<xsl:if test="(nom = ./parcours/nom)">
+							<a href="parcours-{code}.html#{code}">
+								<xsl:value-of select="nom" />
+							</a>
+						</xsl:if>
+					</td>
+					<td>
+						<xsl:if test="not(nom = ./parcours/nom)">
+							<xsl:for-each select="parcours">
+								<table border="3" bgcolor="#CCC" cellspacing="3px">					<!-- à revoir... -->
+									<a href="parcours-{code}.html#{code}">
+										<xsl:value-of select="nom" />
+									</a>
+								</table>
+							</xsl:for-each>
+						</xsl:if>
 					</td>
 				</tr>
 			</xsl:for-each>
