@@ -65,7 +65,7 @@
   <xs:element name="spécialités">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="spécialité"/>
+        <xs:element maxOccurs="unbounded" ref="spécialité"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -108,7 +108,7 @@
   <xs:element name="programme">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="ref-matière"/>
+        <xs:element maxOccurs="unbounded" ref="ref-matière"/>
       </xs:sequence>
       <xs:attribute name="semestre" use="required" type="xs:NCName"/>
     </xs:complexType>
