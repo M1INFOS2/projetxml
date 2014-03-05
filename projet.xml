@@ -58,6 +58,7 @@
 	<matières>
 		<matière id="anglais2" type="obligatoire">
 			<nom>Anglais 2</nom>
+			<ref-intervenant ref="lugiez" />
 			<résumé>
 				<p>
 					Expression orale et écrite : exposés sur des sujets scientifiques
@@ -148,7 +149,7 @@
 			<horaire_c_td_tp>10h/10h/10h</horaire_c_td_tp>
 		</matière>
 		<matière id="progpara" type="obligatoire">
-			<nom>Programmation fonctionnelle</nom>
+			<nom>Programmation parallèle</nom>
 			<ref-intervenant ref="morin" />
 			<résumé>
 				<p>
@@ -545,9 +546,22 @@
 					<ref-matière ref="FIL" />
 					<ref-matière ref="MED" />
 					<ref-matière ref="IAA" />
+					<ref-matière ref="crypto" />
 				</programme>
-				<programme semestre="S2">
-					<ref-matière ref="anglais2" />
+				<programme semestre="S2">		
+					<ref-matière ref="anglais1" type="obligatoire"/>
+					<ref-matière ref="communication1" type="obligatoire"/>
+					<ref-matière ref="bda" type="obligatoire"/>
+					<ref-matière ref="xml" type="obligatoire"/>
+					<ref-matière ref="aro" type="obligatoire"/>
+					<ref-matière ref="ter" type="optionelle"/>
+					<ref-matière ref="stageM1" type="optionelle"/>
+					<ref-matière ref="sémantique" type="optionelle"/>
+					<ref-matière ref="AD" type="optionelle"/>
+					<ref-matière ref="ISI" type="optionelle"/>
+					<ref-matière ref="fouilleSGBD" type="optionelle"/>
+					<ref-matière ref="IA" type="optionelle"/>
+					<ref-matière ref="APG" type="optionelle"/>
 				</programme>
 			</parcours>
 		</spécialité>
