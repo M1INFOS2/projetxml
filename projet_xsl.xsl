@@ -107,9 +107,9 @@
 					  <link rel="stylesheet" type="text/css" href="mon_style.css" />
 					</head>
 					<body>
-						<h2 align="center">
+						<h1 align="center">
 							<xsl:value-of select="nom" />
-						</h2>
+						</h1>
 						<table border="1" bgcolor="#CCC" cellspacing="3px">
 							<tr>
 								<th>Nom</th>
