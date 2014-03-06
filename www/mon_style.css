@@ -1,12 +1,39 @@
 table, td, th,tr
 {
 	border : solid 1px black;
-	background-color : #222;
+	background-color : #222222;
+}
+table.menu {
+	position: absolute;
+	width : 100%;
+    text-align: center;
+    top : 0px;
+    left : 0px;
+    border : none;
+    margin-bottom : 50px;
+}
+
+a.menu{
+	font-size : 20px;
+}
+
+a.menu:link{
+	color : #EBC000;
+	text-decoration:none;
+}
+
+a.menu:visited{
+size : 30px;
+	color : #EBC000;
+}
+
+a.menu:hover {
+color:#EBCF00;
 }
 
 body { 
-     Background:#444; 
-     color : #EEE;
+     Background:#444444; 
+     color : #EEEEEE;
  } 
 
 ul,ol,li {
@@ -14,10 +41,13 @@ ul,ol,li {
 }
 
 h1{
+	margin-top:60px;
+	margin-bottom:40px;
 	color : #CC6D00;
 }
 
 h2{
+	margin-top:50px;
 	color : #CC6D00;
 }
 
@@ -26,10 +56,8 @@ h3{
 }
 
 a:link{
-color : #FFF;
+color : #FFFFFF;
 }
 
-a:visited {color:#CCC;}
-a:hover {color:#FFF;}
-}
-
+a:visited {color:#CCCCCC;}
+a:hover {color:#FFFFFF;}

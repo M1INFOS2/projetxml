@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	version="1.0">
 
@@ -8,16 +7,44 @@
 		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" />
 
 	<xsl:template match="/master">
+
 		<xsl:document href="www/index.html">
 			<html>
 				<head>
 					<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-				  	<link rel="stylesheet" type="text/css" href="mon_style.css" />
+					<link rel="stylesheet" type="text/css" href="mon_style.css" />
 				</head>
 				<body>
+					<xsl:call-template name="menu" />
 					<xsl:call-template name="liste-personnes-nom" />
 					<xsl:call-template name="liste-matières-nom" />
 					<xsl:call-template name="liste-spécialités-nom" />
+				</body>
+			</html>
+		</xsl:document>
+
+		<xsl:document href="www/personnes.html">
+			<html>
+				<head>
+					<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+					<link rel="stylesheet" type="text/css" href="mon_style.css" />
+				</head>
+				<body>
+					<xsl:call-template name="menu" />
+					<xsl:call-template name="liste-personnes-nom" />
+				</body>
+			</html>
+		</xsl:document>
+
+		<xsl:document href="www/matieres.html">
+			<html>
+				<head>
+					<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+					<link rel="stylesheet" type="text/css" href="mon_style.css" />
+				</head>
+				<body>
+					<xsl:call-template name="menu" />
+					<xsl:call-template name="liste-matières-nom" />
 				</body>
 			</html>
 		</xsl:document>
@@ -26,6 +53,22 @@
 		<xsl:call-template name="liste-matières" />
 		<xsl:call-template name="liste-spécialités" />
 		<xsl:call-template name="liste-parcours" />
+	</xsl:template>
+
+	<xsl:template name="menu">
+		<table class="menu">
+			<tr>
+				<td>
+					<a class="menu" href="index.html">Accueil</a>
+				</td>
+				<td>
+					<a class="menu" href="personnes.html">Intervenants</a>
+				</td>
+				<td>
+					<a class="menu" href="matieres.html">Matières</a>
+				</td>
+			</tr>
+		</table>
 	</xsl:template>
 
 	<xsl:template name="liste-personnes-nom">
@@ -39,7 +82,6 @@
 				</li>
 			</xsl:for-each>
 		</ul>
-		<br />
 	</xsl:template>
 
 	<xsl:template name="liste-matières-nom">
@@ -53,12 +95,11 @@
 				</li>
 			</xsl:for-each>
 		</ul>
-		<br />
 	</xsl:template>
 
 	<xsl:template name="liste-spécialités-nom">
 		<h2>Spécialités et parcours</h2>
-<table>
+		<table>
 			<tr>
 				<th>Années</th>
 				<th>Spécialité</th>
@@ -104,10 +145,11 @@
 				<html>
 					<head>
 						<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-					  <link rel="stylesheet" type="text/css" href="mon_style.css" />
+						<link rel="stylesheet" type="text/css" href="mon_style.css" />
 					</head>
 					<body>
-						<h1 align="center">
+						<xsl:call-template name="menu" />
+						<h1>
 							<xsl:value-of select="nom" />
 						</h1>
 						<table border="1" bgcolor="#CCC" cellspacing="3px">
@@ -172,13 +214,18 @@
 				<html>
 					<head>
 						<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-					  <link rel="stylesheet" type="text/css" href="mon_style.css" />
+						<link rel="stylesheet" type="text/css" href="mon_style.css" />
 					</head>
+
 					<body>
+						<xsl:call-template name="menu" />
 						<xsl:variable name="nom_m">
 							<xsl:value-of select="@id" />
 						</xsl:variable>
-						<table border="1" bgcolor="#CCC" cellspacing="3px">
+						<h1>
+							<xsl:value-of select="nom" />
+						</h1>
+						<table>
 							<tr>
 								<th>Nom</th>
 								<th>résumé</th>
@@ -241,10 +288,12 @@
 				<html>
 					<head>
 						<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-					  <link rel="stylesheet" type="text/css" href="mon_style.css" />
+						<link rel="stylesheet" type="text/css" href="mon_style.css" />
 					</head>
 					<body>
-						<table border="1" bgcolor="#CCC" cellspacing="3px">
+						<xsl:call-template name="menu" />
+						<h1><xsl:value-of select="nom" /></h1>
+						<table>
 							<tr>
 								<th>Nom</th>
 								<th>Code</th>
@@ -302,10 +351,14 @@
 				<html>
 					<head>
 						<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-					  <link rel="stylesheet" type="text/css" href="mon_style.css" />
+						<link rel="stylesheet" type="text/css" href="mon_style.css" />
 					</head>
 					<body>
-						<table border="1" bgcolor="#CCC" cellspacing="3px">
+						<xsl:call-template name="menu" />
+						<h1>
+							<xsl:value-of select="nom" />
+						</h1>
+						<table>
 							<tr>
 								<th>Nom</th>
 								<th>Code</th>
@@ -333,12 +386,10 @@
 								</td>
 							</tr>
 						</table>
-						<br />
 						<h2>Présentation</h2>
 						<p>
 							<xsl:value-of select="présentation" />
 						</p>
-						<br />
 						<h2>Programme des enseignements</h2>
 						<xsl:for-each select="programme">
 							<h3>
