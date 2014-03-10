@@ -171,7 +171,7 @@
                   <xsl:value-of select="établissement" />
                 </td>
                 <td>
-                  <xsl:value-of select="email" />
+                  <a href="mailto:{email}"><xsl:value-of select="email" /></a>
                 </td>
               </tr>
             </table>
