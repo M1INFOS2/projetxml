@@ -14,53 +14,51 @@ import java.util.*;
 
 public class SampleCreateDom {
 
-	public static void main(String[] args) throws Exception {
-		String path = "./";
+    public static void main(String[] args) throws Exception {
+        String path = "./";
 
-		File xmlFile = new File(path+"projet.xml");
-//		File xslFile = new File(path+"projet_xsl.xsl");
+        File xmlFile = new File(path+"projet.xml");
 		
-		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 
-		Document docXml = dBuilder.parse(xmlFile);
-//		Document docXsl = dBuilder.parse(xslFile);
+        Document docXml = dBuilder.parse(xmlFile);
 
-		docXml.getDocumentElement().normalize(); 
+        docXml.getDocumentElement().normalize(); 
 		
 		
 	// --------- transformation pour avoir un .html. Ne marche pas à cause de l'élément xsl:document	
 		
-//		StreamSource stylesource = new StreamSource(path+"projet_xsl.xsl");
+        //		StreamSource stylesource = new StreamSource(path+"projet_xsl.xsl");
 
-//		TransformerFactory myFactory = TransformerFactory.newInstance();
-//		Transformer transformer = myFactory.newTransformer(stylesource);
-//		transformer.setOutputProperty(OutputKeys.METHOD, "html");
-//		transformer.setOutputProperty(OutputKeys.ENCODING, "iso-8859-1");
-//		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-//			
-//
-//	      transformer.transform(new DOMSource(docXml),
-//	    		  new DOMResult());
+        //		TransformerFactory myFactory = TransformerFactory.newInstance();
+        //		Transformer transformer = myFactory.newTransformer(stylesource);
+        //		transformer.setOutputProperty(OutputKeys.METHOD, "html");
+        //		transformer.setOutputProperty(OutputKeys.ENCODING, "iso-8859-1");
+        //		transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        //			
+        //
+        //	      transformer.transform(new DOMSource(docXml),
+        //	    		  new DOMResult());
 	      
 	// ----------- fin transormation	     
 		
-		// affichage sur la sortie standard
+        // affichage sur la sortie standard
 		
-		NodeList nList = docXml.getElementsByTagName("matière");
-		for (int temp = 0; temp < nList.getLength(); temp++) {
+        NodeList nList = docXml.getElementsByTagName("matière");
+        for (int temp = 0; temp < nList.getLength(); temp++) {
 			 
-			Node nNode = nList.item(temp);
+            Node nNode = nList.item(temp);
 	 
-			System.out.println("\nCurrent Element :" + nNode.getNodeName());
+            System.out.println("\nCurrent Element :" + nNode.getNodeName());
 	 
-			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-				Element eElement = (Element) nNode;
-				System.out.println(eElement.getElementsByTagName("nom").item(0).getTextContent());
-			}
-		}
+            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                Element eElement = (Element) nNode;
+                System.out.println(eElement.getElementsByTagName("nom").item(0).getTextContent());
+            }
+        }
 
 
-	}
+    }
 
 }
