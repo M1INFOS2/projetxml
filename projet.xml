@@ -7,51 +7,61 @@
 			<nom>Denis LUGIEZ</nom>
 			<établissement>&amusciences;</établissement>
 			<email>denis.lugiez@univ-amu.fr</email>
+			<site_web>http://pageperso.lif.univ-mrs.fr/~denis.lugiez/</site_web>
 		</personne>
 		<personne id="massat">
 			<nom>Jean-Luc MASSAT</nom>
 			<établissement>&amusciences;</établissement>
 			<email>jean-luc.massat@univ-amu.fr</email>
+			<site_web>http://pageperso.lif.univ-mrs.fr/~jean-luc.massat/</site_web>
 		</personne>
 		<personne id="novelli">
 			<nom>Noël Novelli</nom>
 			<établissement>&amusciences;</établissement>
 			<email>noel.novelli@univ-amu.fr</email>
+			<site_web>http://pageperso.lif.univ-mrs.fr/~noel.novelli/</site_web>
 		</personne>
 		<personne id="tichit">
 			<nom>Laurent Tichit</nom>
 			<établissement>&amusciences;</établissement>
 			<email>laurent.tichit@univ-amu.fr</email>
+			<site_web>http://pageperso.lif.univ-mrs.fr/~laurent.tichit/</site_web>
 		</personne>
 		<personne id="creignou">
 			<nom>Nadia Creignou</nom>
 			<établissement>&amusciences;</établissement>
 			<email>nadia.creignou@univ-amu.fr</email>
+			<site_web>http://pageperso.lif.univ-mrs.fr/~nadia.creignou/</site_web>
 		</personne>
 		<personne id="frederic">
 			<nom>Olive Frederic</nom>
 			<établissement>&amusciences;</établissement>
 			<email>olive.frederic@univ-amu.fr</email>
+			<site_web>http://pageperso.lif.univ-mrs.fr/~olive.frederic/</site_web>
 		</personne>
 		<personne id="godard">
 			<nom>Emanuel Godard</nom>
 			<établissement>&amusciences;</établissement>
 			<email>emanuel.godard@univ-amu.fr</email>
+			<site_web>http://pageperso.lif.univ-mrs.fr/~emanuel.godard/</site_web>
 		</personne>
 		<personne id="santocanale">
 			<nom>Luigi Santocanale</nom>
 			<établissement>&amusciences;</établissement>
 			<email>luigi.santocanale@univ-amu.fr</email>
+			<site_web>http://pageperso.lif.univ-mrs.fr/~luigi.santocanale/</site_web>
 		</personne>
 		<personne id="couetoux">
 			<nom>Basil Couetoux</nom>
 			<établissement>&amusciences;</établissement>
 			<email>basil.couetoux@univ-amu.fr</email>
+			<site_web>http://pageperso.lif.univ-mrs.fr/~basil.couetoux/</site_web>
 		</personne>
 		<personne id="morin">
 			<nom>Rémi Morin</nom>
 			<établissement>&amusciences;</établissement>
 			<email>remi.morin@univ-amu.fr</email>
+			<site_web>http://pageperso.lif.univ-mrs.fr/~remi.morin@/</site_web>
 		</personne>
 	</personnes>
 
