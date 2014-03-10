@@ -22,12 +22,14 @@
         <xs:element ref="nom"/>
         <xs:element ref="établissement"/>
         <xs:element ref="email"/>
+        <xs:element ref="site_web"/>
       </xs:sequence>
       <xs:attribute name="id" use="required" type="xs:NCName"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="établissement" type="xs:string"/>
   <xs:element name="email" type="xs:string"/>
+  <xs:element name="site_web" type="xs:anyURI"/>
   <xs:element name="matières">
     <xs:complexType>
       <xs:sequence>
