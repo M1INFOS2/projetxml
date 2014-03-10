@@ -255,14 +255,12 @@
 								<td>
 
 									<xsl:for-each select="ref-intervenant">
-										<xsl:variable name="nom_p">
+                                                                          <xsl:variable name="nom_p">
 											<xsl:value-of select="@ref" />
 										</xsl:variable>
-										<table>
 											<a href="personne-{@ref}.html#{@ref}">
 												<xsl:value-of select="/master/personnes/personne[@id =$nom_p]/nom" />
-											</a>
-										</table>
+											</a><br/>
 									</xsl:for-each>
 								</td>
 								<td>
