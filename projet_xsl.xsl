@@ -130,11 +130,10 @@
           <td>
             <xsl:if test="not(nom = ./parcours/nom)">
               <xsl:for-each select="parcours">
-                <table>
                   <a href="parcours-{code}.html#{code}">
                     <xsl:value-of select="nom" />
                   </a>
-                </table>
+                  <br />
               </xsl:for-each>
             </xsl:if>
           </td>
