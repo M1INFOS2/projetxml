@@ -4,7 +4,7 @@ table, td, th,tr
 	background-color : #222222;
 }
 table.menu {
-	position: absolute;
+	position: fixed ;
 	width : 100%;
     text-align: center;
     top : 0px;
